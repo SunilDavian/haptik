@@ -18,6 +18,8 @@ function App() {
 
   const [isSorting, setSorting] = useState(false);
 
+  const pageSize = 4;
+
   useEffect(() => {
     if (isSorting) {
       const newList = [...friendsData]
@@ -25,13 +27,12 @@ function App() {
 
       setFilteredList(newList);
     } else {
+
       setFilteredList(friendsData);
     }
 
   }, [friendsData, isSorting])
 
-
-  const pageSize = 4;
 
   const handlePageChange = page => {
     setCurrentPage(page);
@@ -63,6 +64,10 @@ function App() {
   const handleDelete = (deletedFriend) => {
     const newFriendList = friendsData.filter(friend => friend.id !== deletedFriend.id);
 
+    if (newFriendList.length < currentPage * pageSize) {
+      setCurrentPage(currentPage - 1);
+    }
+
     setFriends(newFriendList);
   }
 
@@ -78,6 +83,8 @@ function App() {
   }
 
   const { totalCount, data } = getPageData();
+
+  console.log('data>.----', data, totalCount);
 
   return (
     <div>
