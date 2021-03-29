@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Sunil Yadav",
+        "isFavorite": false
+    },
+    {
+        "id": 2,
+        "name": "Gopal Singh",
+        "isFavorite": false
+    },
+    {
+        "id": 3,
+        "name": "Manoj Jangad",
+        "isFavorite": false
+    },
+    {
+        "id": 4,
+        "name": "Neha Awasthi",
+        "isFavorite": false
+    }
+]

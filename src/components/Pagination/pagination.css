@@ -1,0 +1,28 @@
+.pagination {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination div {
+    float: left;
+    padding: 8px 16px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border: 1px solid #696767cc;
+    color: #696767cc;
+  }
+  
+  /* Style the active/current link */
+  .pagination div.active {
+    background-color:#696767cc;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .pagination div:not(.active) {
+    background-color: white;
+  }
+  
